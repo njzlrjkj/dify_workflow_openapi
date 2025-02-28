@@ -1,4 +1,4 @@
-version: '3.5'
+version: 'latest'
 services:
   dify_workflow_openapi:
     container_name: dify_workflow_openapi
