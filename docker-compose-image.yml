@@ -1,0 +1,15 @@
+version: 'latest'
+services:
+  # dify_workflow_openapi API relay service
+  dify_workflow_openapi:
+   #  build: dify_chat_openapi
+    image: njzlrjkj/dify_workflow_openapi:latest
+    container_name: dify_workflow_openapi
+    network_mode: bridge
+    ports:
+      - "3012:3012"
+    restart: always
+    environment: 
+      - DIFY_API_URL=http://kb.itcg.cn/v1
+      - BOT_TYPE=Workflow
+      - MODELS_NAME=gpt-3.5-turbo-0301
